@@ -14,12 +14,7 @@ public record AtaRequestPostDto(
         String rsg,
         String rsgSuplente,
         BigDecimal setimaTradicao,
-        BigDecimal vendaDeLiteratura,
-        BigDecimal saldoAnterior,
-        BigDecimal aluguel,
-        BigDecimal manutencaoDaSala,
-        BigDecimal despesasComServidor,
-        BigDecimal compraDeLiteratura,
+        BigDecimal despesas,
         String observacoes
 ) {
 }

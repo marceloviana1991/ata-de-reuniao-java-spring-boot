@@ -25,12 +25,7 @@ public class AtaModel {
     private String rsg;
     private String rsgSuplente;
     private BigDecimal setimaTradicao;
-    private BigDecimal vendaDeLiteratura;
-    private BigDecimal saldoAnterior;
-    private BigDecimal aluguel;
-    private BigDecimal manutencaoDaSala;
-    private BigDecimal despesasComServidor;
-    private BigDecimal compraDeLiteratura;
+    private BigDecimal despesas;
     private String observacoes;
 
 
@@ -47,12 +42,7 @@ public class AtaModel {
         this.rsg = ataRequestPostDto.rsg();
         this.rsgSuplente = ataRequestPostDto.rsgSuplente();
         this.setimaTradicao = ataRequestPostDto.setimaTradicao();
-        this.vendaDeLiteratura = ataRequestPostDto.vendaDeLiteratura();
-        this.saldoAnterior = ataRequestPostDto.saldoAnterior();
-        this.aluguel = ataRequestPostDto.aluguel();
-        this.manutencaoDaSala = ataRequestPostDto.manutencaoDaSala();
-        this.despesasComServidor = ataRequestPostDto.despesasComServidor();
-        this.compraDeLiteratura = ataRequestPostDto.compraDeLiteratura();
+        this.despesas = ataRequestPostDto.despesas();
         this.observacoes = ataRequestPostDto.observacoes();
     }
 
@@ -74,12 +64,12 @@ public class AtaModel {
         return quantidadeDeParticipantes;
     }
 
-    public int getQuantidadeDeVisitantes() {
-        return quantidadeDeVisitantes;
-    }
-
     public int getQuantidadeDeIngressos() {
         return quantidadeDeIngressos;
+    }
+
+    public int getQuantidadeDeVisitantes() {
+        return quantidadeDeVisitantes;
     }
 
     public boolean isAberta() {
@@ -98,40 +88,20 @@ public class AtaModel {
         return tesoureiro;
     }
 
-    public String getRsgSuplente() {
-        return rsgSuplente;
-    }
-
     public String getRsg() {
         return rsg;
+    }
+
+    public String getRsgSuplente() {
+        return rsgSuplente;
     }
 
     public BigDecimal getSetimaTradicao() {
         return setimaTradicao;
     }
 
-    public BigDecimal getVendaDeLiteratura() {
-        return vendaDeLiteratura;
-    }
-
-    public BigDecimal getSaldoAnterior() {
-        return saldoAnterior;
-    }
-
-    public BigDecimal getAluguel() {
-        return aluguel;
-    }
-
-    public BigDecimal getManutencaoDaSala() {
-        return manutencaoDaSala;
-    }
-
-    public BigDecimal getDespesasComServidor() {
-        return despesasComServidor;
-    }
-
-    public BigDecimal getCompraDeLiteratura() {
-        return compraDeLiteratura;
+    public BigDecimal getDespesas() {
+        return despesas;
     }
 
     public String getObservacoes() {

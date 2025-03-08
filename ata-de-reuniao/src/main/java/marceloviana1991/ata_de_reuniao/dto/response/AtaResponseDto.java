@@ -19,12 +19,7 @@ public record AtaResponseDto(
         String rsg,
         String rsgSuplente,
         BigDecimal setimaTradicao,
-        BigDecimal vendaDeLiteratura,
-        BigDecimal saldoAnterior,
-        BigDecimal aluguel,
-        BigDecimal manutencaoDaSala,
-        BigDecimal despesasComServidor,
-        BigDecimal compraDeLiteratura,
+        BigDecimal despesas,
         String observacoes
 ) {
     public AtaResponseDto(AtaModel ataModel) {
@@ -42,12 +37,7 @@ public record AtaResponseDto(
                 ataModel.getRsg(),
                 ataModel.getRsgSuplente(),
                 ataModel.getSetimaTradicao(),
-                ataModel.getVendaDeLiteratura(),
-                ataModel.getSaldoAnterior(),
-                ataModel.getAluguel(),
-                ataModel.getManutencaoDaSala(),
-                ataModel.getDespesasComServidor(),
-                ataModel.getCompraDeLiteratura(),
+                ataModel.getDespesas(),
                 ataModel.getObservacoes()
         );
     }

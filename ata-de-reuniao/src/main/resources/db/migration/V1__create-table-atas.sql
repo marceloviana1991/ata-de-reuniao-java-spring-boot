@@ -13,11 +13,6 @@ CREATE TABLE atas (
     rsg VARCHAR(255),
     rsg_suplente VARCHAR(255),
     setima_tradicao DECIMAL(10,2),
-    venda_de_literatura DECIMAL(10,2),
-    saldo_anterior DECIMAL(10,2),
-    aluguel DECIMAL(10,2),
-    manutencao_da_sala DECIMAL(10,2),
-    despesas_com_servidor DECIMAL(10,2),
-    compra_de_literatura DECIMAL(10,2),
+    despesas DECIMAL(10,2),
     observacoes VARCHAR(1000)
 );
