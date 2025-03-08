@@ -3,12 +3,11 @@ package marceloviana1991.ata_de_reuniao.dto.response;
 import marceloviana1991.ata_de_reuniao.model.AtaModel;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 
 public record AtaResponseDto(
         Long id,
         int numeroDaReuniao,
-        LocalDate data,
+        String data,
         int quantidadeDeParticipantes,
         int quantidadeDeIngressos,
         int quantidadeDeVisitantes,
@@ -26,7 +25,7 @@ public record AtaResponseDto(
         this(
                 ataModel.getId(),
                 ataModel.getNumeroDaReuniao(),
-                ataModel.getData(),
+                ataModel.getData().toString(),
                 ataModel.getQuantidadeDeParticipantes(),
                 ataModel.getQuantidadeDeIngressos(),
                 ataModel.getQuantidadeDeVisitantes(),
