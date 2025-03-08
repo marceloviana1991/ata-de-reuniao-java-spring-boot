@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("ata")
+@CrossOrigin(origins = "*")
 public class AtaController {
 
     @Autowired
