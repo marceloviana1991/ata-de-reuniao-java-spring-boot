@@ -1,6 +1,10 @@
 package marceloviana1991.ata_de_reuniao.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import marceloviana1991.ata_de_reuniao.dto.request.post.AtaRequestPostDto;
 
 import java.math.BigDecimal;
@@ -9,6 +13,10 @@ import java.util.Objects;
 
 @Table(name = "atas")
 @Entity(name = "AtaModel")
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(of = "id")
 public class AtaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,80 +52,5 @@ public class AtaModel {
         this.setimaTradicao = ataRequestPostDto.setimaTradicao();
         this.despesas = ataRequestPostDto.despesas();
         this.observacoes = ataRequestPostDto.observacoes();
-    }
-
-    public AtaModel() {}
-
-    public Long getId() {
-        return id;
-    }
-
-    public int getNumeroDaReuniao() {
-        return numeroDaReuniao;
-    }
-
-    public LocalDate getData() {
-        return data;
-    }
-
-    public int getQuantidadeDeParticipantes() {
-        return quantidadeDeParticipantes;
-    }
-
-    public int getQuantidadeDeIngressos() {
-        return quantidadeDeIngressos;
-    }
-
-    public int getQuantidadeDeVisitantes() {
-        return quantidadeDeVisitantes;
-    }
-
-    public boolean isAberta() {
-        return aberta;
-    }
-
-    public boolean isServico() {
-        return servico;
-    }
-
-    public String getSecretario() {
-        return secretario;
-    }
-
-    public String getTesoureiro() {
-        return tesoureiro;
-    }
-
-    public String getRsg() {
-        return rsg;
-    }
-
-    public String getRsgSuplente() {
-        return rsgSuplente;
-    }
-
-    public BigDecimal getSetimaTradicao() {
-        return setimaTradicao;
-    }
-
-    public BigDecimal getDespesas() {
-        return despesas;
-    }
-
-    public String getObservacoes() {
-        return observacoes;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        AtaModel ataModel = (AtaModel) o;
-        return Objects.equals(id, ataModel.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
     }
 }
