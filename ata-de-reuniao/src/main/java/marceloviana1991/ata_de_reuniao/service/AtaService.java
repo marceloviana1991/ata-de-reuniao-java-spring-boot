@@ -35,4 +35,8 @@ public class AtaService {
         LocalDate endDate = yearMonth.atEndOfMonth(); // Último dia do mês
         return ataRepository.findByDataBetween(startDate, endDate).stream().map(AtaResponseDto::new).toList();
     }
+
+    public AtaResponseDto detalhar(Long id) {
+        return new AtaResponseDto(ataRepository.getReferenceById(id));
+    }
 }

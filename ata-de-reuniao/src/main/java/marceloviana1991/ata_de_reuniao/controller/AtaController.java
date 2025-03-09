@@ -30,4 +30,9 @@ public class AtaController {
     public List<AtaResponseDto> listarPorMesEAno(@PathVariable int mes, @PathVariable int ano) {
         return ataService.buscarPorMesEAno(mes, ano);
     }
+
+    @GetMapping("/{id}")
+    public AtaResponseDto detalhar(@PathVariable Long id) {
+        return ataService.detalhar(id);
+    }
 }
